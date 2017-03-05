@@ -20,7 +20,7 @@ app.get('/api/todos', (req, res) => {
 
 app.post('/api/todos/update/:id', function(req, res) {
   if (req.body.isCompleted) {
-   req.body.isCompleted = (req.body.isCompleted === "true");
+   req.body.isCompleted = (req.body.isCompleted == "true" || req.body.isCompleted == true);
   }
 
   let todos = loadTodos();
