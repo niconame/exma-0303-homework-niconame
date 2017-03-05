@@ -18,8 +18,10 @@
   npm install
   npm start
   ```
+
 * 如何繳交作業
+
   ```
   git push origin homework
   ```
-  然後到 [https://github.com/tz5514/exma-0303-homework-niconame/compare/master...homework](https://github.com/tz5514/exma-0303-homework-niconame/compare/master...homework) 發起一個 PR
+  然後到 [這裡](https://github.com/tz5514/exma-0303-homework-niconame/compare/master...homework) 發起一個 PR
