@@ -29,3 +29,6 @@
   git push origin homework
   ```
   然後到 [這裡](https://github.com/tz5514/exma-0303-homework-niconame/compare/master...homework) 發起一個 PR
+  
+* 關於 fetch 發送 post 的方法，以及處理 response 為普通文字
+  * 我有更新投影片，可以參考 [http://slides.com/tz5514/deck#/2/2](http://slides.com/tz5514/deck#/2/2)
