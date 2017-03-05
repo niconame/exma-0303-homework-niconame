@@ -3,6 +3,7 @@
   * 至 3/10 (五) 的中午 12:00，截止後會暫時移除各位的編輯權
 * 繳交方式
   * 推到 homework 分支，並與 master 分支比較發起 Pull Request，推錯地方視同作業繳交失敗
+  * 禁止 fork
 * 基本要求
   * 範例程式只使用了 ES5 語法以及 $.ajax，請自行依課程內容所教，判斷何處適合使用 ES6 語法並改寫之
   * 替換 $.ajax 成為 fetch API (配合 async / await)
@@ -19,9 +20,10 @@
   npm start
   ```
   然後前往 [http://localhost:3000](http://localhost:3000)
-
+  
+  當程式碼有所更改並存檔時，Webpack 會自動重新 compile & bundle
+  
 * 如何繳交作業
-
   ```
   git push origin homework
   ```
