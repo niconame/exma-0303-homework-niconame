@@ -18,6 +18,7 @@
   npm install
   npm start
   ```
+  然後前往 [http://localhost:3000](http://localhost:3000)
 
 * 如何繳交作業
 
