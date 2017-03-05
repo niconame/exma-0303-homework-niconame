@@ -11,8 +11,15 @@
   * 程式碼縮排保持一致美觀
   * 你可以在程式碼中加上你的註解，說明你為什麼覺得這裡要這樣改或為什麼不改，幫助作業的批改者理解你的思考以及判斷依據
 
-* 運行開發環境
+* 如何運行開發環境
   ```
+  git clone git@github.com:tz5514/exma-0303-homework-niconame.git --branch homework
+  cd exma-0303-homework-niconame
   npm install
   npm start
   ```
+* 如何繳交作業
+  ```
+  git push origin homework
+  ```
+  然後到 [https://github.com/tz5514/exma-0303-homework-panwanting/compare/master...homework](https://github.com/tz5514/exma-0303-homework-panwanting/compare/master...homework) 發起一個 PR
