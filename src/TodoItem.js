@@ -4,10 +4,12 @@ var $ = require('jquery');
 var $todoList = $('#todo-list');
 
 // TodoItem Component 的建構函數
+// 這個 function 是一個 建構函數，也就是說可以改用 ES6 class 語法來表示
 function TodoItem(data) {
   this.id = data.id;
 
   // 檢查資料是否存在值，沒有的話給予預設值
+  // 以下預設值可以直接在 class constructor 的參數處直接定義
   if (data.isCompleted === undefined) {
     this.isCompleted = false;
   } else {
@@ -33,9 +35,12 @@ function TodoItem(data) {
   this.bindOnToggleEvent();
 }
 
+// 以下 TodoItem.prototype.xxx 的函數都是 TodoItem class 的成員函數
+
 // 根據資料產生 UI 初始化的 HTML 字串
 TodoItem.prototype.renderHTML = function() {
   var isChecked = (this.isCompleted)? 'checked' : '';
+  // 下面這段字串可以使用 template string 來代替，來達到直接換行以及嵌入變數
   return '<div class="todo-item">' +
            '<div class="ui toggle checkbox">' +
              '<input type="checkbox" name="public" ' + isChecked + '>' +
