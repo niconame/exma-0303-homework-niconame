@@ -2,34 +2,35 @@
 require('../styles/index.scss');
 
 // require modules
-var $ = require('jquery');
-var TodoItem = require('./TodoItem.js');
+import $ from 'jquery';
 
-var todoInstances = [];
+import TodoItem from './TodoItem.js';
+
+const todoInstances = [];
 
 // 更新一個 todo 的資料到 API Server
 function updateTodoAPI(data) {
   $.ajax({
     type: 'post',
-    url: '/api/todos/update/' + data.id,
+    url: `/api/todos/update/${data.id}`,
     dataType: 'text',
-    data: data,
-    success: function(result) {
+    data,
+    success(result) {
       console.log(result);
     }
   });
-};
+}
 
 // 將所有的 todo 都變成 完成 或 未完成 的顯示狀態，並呼叫更新資料到 API Server
 function toggleAllTodosCompleted(isCompleted) {
-  todoInstances.forEach(function(todo) {
+  todoInstances.forEach(todo => {
     todo.toggleCompleted(isCompleted);
   });
-};
+}
 
 // 建立並初始化一個 Todo Component
 function createTodoComponent(todoData) {
-  var newTodo = new TodoItem({
+  const newTodo = new TodoItem({
     id: todoData.id,
     title: todoData.title,
     isCompleted: todoData.isCompleted,
@@ -43,8 +44,8 @@ function loadAPI() {
   $.ajax({
     url: '/api/todos',
     dataType: 'json',
-    success: function(todoList) {
-      todoList.forEach(function(todoData){
+    success(todoList) {
+      todoList.forEach(todoData => {
         createTodoComponent(todoData);
       });
     }
@@ -52,19 +53,17 @@ function loadAPI() {
 }
 
 // 程式進入點
-$(document).ready(function () {
+$(document).ready(() => {
   loadAPI();
 
   // 綁定全部完成的事件
-  $('#complete-all-btn').click(function(){
+  $('#complete-all-btn').click(() => {
     toggleAllTodosCompleted(true);
   });
 
   // 綁定全部未完成的事件
-  $('#uncomplete-all-btn').click(function(){
+  $('#uncomplete-all-btn').click(() => {
     toggleAllTodosCompleted(false);
   });
 });
-
-
 
